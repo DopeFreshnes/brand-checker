@@ -10,6 +10,7 @@ frontend/build/
 frontend/.vercel
 frontend/src/*.tsbuildinfo
 frontend/src/next-env.d.ts
+frontend/next-env.d.ts
 frontend/coverage/
 # Also catch .next if created at root (shouldn't happen, but just in case)
 .next/
