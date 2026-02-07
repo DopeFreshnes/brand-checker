@@ -127,9 +127,9 @@ async def get_ipau_access_token() -> str:
 
     # Request new token
     async with _token_lock:
-        return await request_new_token()
+        return await request_new_token(token_url, client_id, client_secret)
 
-async def request_new_token() -> str:
+async def request_new_token(token_url: str, client_id: str, client_secret: str) -> str:
     async with httpx.AsyncClient() as client:
         response = await client.post(
             token_url,
